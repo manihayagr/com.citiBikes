@@ -28,7 +28,6 @@ public class StepDefinitions {
     @Given("I want to get the citiBikes location")
     public void iWantToGetTheCitiBikesLocation() {
         baseUri="http://api.citybik.es/v2";
-        absUrl= "/networks";
         request = RestAssured.given().log().all().config(RestAssuredConfig.config().encoderConfig(
                 RestAssured.config().getEncoderConfig().appendDefaultContentCharsetToContentTypeIfUndefined(false)));
     }
